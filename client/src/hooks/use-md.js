@@ -1,3 +1,4 @@
+// Fetches md file in text format from the given link
 import { useEffect, useState } from 'react';
 
 const useFetch = (link) => {

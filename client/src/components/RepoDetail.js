@@ -14,7 +14,7 @@ const RepoDetail = (props) => {
     return (
         <section className={classes['repo-detail']}>
             <Link to='/'>
-                <p>{`<= Go Back`}</p>
+                <button>{`<= Go Back`}</button>
             </Link>
             <p><b>Message:</b> I could not find this section!</p>
             <p><b>Author ID:</b> {props.author}</p>

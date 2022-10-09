@@ -1,3 +1,5 @@
+// Fetches the json data from backend server located at
+// http://localhost:4000/repos
 import { useEffect, useState } from 'react';
 
 const useFetch = () => {

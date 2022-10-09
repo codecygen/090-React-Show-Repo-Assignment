@@ -25,6 +25,7 @@ const AllRepos = (props) => {
 
     return (
         <section>
+            <p>Filtering</p>
             {repoDisplay}
         </section>
     );

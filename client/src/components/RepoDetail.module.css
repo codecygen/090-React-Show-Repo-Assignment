@@ -7,9 +7,20 @@
     text-decoration: none;
 }
 
+.repo-detail button {
+    padding: 10px;
+    background-color: #eaacac;
+    color: black;
+    font-size: 2rem;
+}
+
 .md {
     border: 2px solid black;
     border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
 }
 
 .md > h1:first-child {
