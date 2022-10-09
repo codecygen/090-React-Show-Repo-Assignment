@@ -1,12 +1,12 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import useFetch from '../hooks/use-fetch';
 
-import classes from './RepoDetailPage.module.css';
+import RepoDetail from '../components/RepoDetail';
 
 const RepoDetailPage = (props) => {
-    const params = useParams();
     const allData = useFetch();
+    const params = useParams();
     const { repoId } = params;
 
     // Filters to match the correct page number with the repo id
@@ -16,15 +16,11 @@ const RepoDetailPage = (props) => {
     const dataDisplay = allData.length === 0 ?
         (<p>Loading...</p>) :
         (
-            <section className={classes['repo-detail']}>
-                <Link to='/'>
-                    <p>{`<= Go Back`}</p>
-                </Link>
-                <p><b>Link:</b> {`https://raw.githubusercontent.com/${pageData.full_name}/master/README.md`}</p>
-                <p><b>Message:</b> I could not find this section!</p>
-                <p><b>Author ID:</b> {pageData.owner.id}</p>
-                <p><b>Recent Commit Date:</b> {new Date(pageData.pushed_at).toLocaleDateString('EN-CA')}</p>
-            </section>
+            <RepoDetail
+                link={`https://raw.githubusercontent.com/${pageData.full_name}/master/README.md`} 
+                author={pageData.owner.id} 
+                date={new Date(pageData.pushed_at).toLocaleDateString('EN-CA')}
+            />
         );
 
     return dataDisplay;

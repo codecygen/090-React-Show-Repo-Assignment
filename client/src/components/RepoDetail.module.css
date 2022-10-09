@@ -1,0 +1,17 @@
+.repo-detail {
+    text-decoration: none;
+    margin: 30px;
+}
+
+.repo-detail * {
+    text-decoration: none;
+}
+
+.md {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.md > h1:first-child {
+    color: red;
+}
