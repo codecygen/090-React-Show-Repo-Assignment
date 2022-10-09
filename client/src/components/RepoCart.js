@@ -1,4 +1,4 @@
-import classes from './Repo.module.css';
+import classes from './RepoCart.module.css';
 
 const RepoCart = (props) => {
     const { name, description, language, forks, date } = props;

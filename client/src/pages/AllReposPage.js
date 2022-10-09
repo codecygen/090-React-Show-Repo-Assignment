@@ -1,17 +1,22 @@
-import RepoCart from "./RepoCart";
+import { Link } from 'react-router-dom';
+
+import RepoCart from "../components/RepoCart";
+
+import classes from './AllReposPage.module.css';
 
 const AllRepos = (props) => {
     const { allData } = props;
 
     const allRepoCarts = allData.map(data => (
-            <RepoCart 
-                key={data.id} 
+        <Link to={`/${data.id}`} key={data.id} className={classes['all-repos']}>
+            <RepoCart
                 name={data.name}
-                description={data.description} 
-                language={data.language} 
-                forks={data.forks_count} 
+                description={data.description}
+                language={data.language}
+                forks={data.forks_count}
                 date={data.created_at}
             />
+        </Link>
     ));
 
     const repoDisplay = allData.length === 0 ?

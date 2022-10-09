@@ -1,4 +1,8 @@
-import AllRepos from './components/AllRepos';
+import { Route, Routes } from 'react-router-dom';
+
+import AllReposPage from './pages/AllReposPage';
+import RepoDetailPage from './pages/RepoDetailPage';
+
 import useFetch from './hooks/use-fetch';
 
 import classes from './App.module.css';
@@ -8,7 +12,19 @@ const App = () => {
 
   return (
     <main className={classes.main}>
-      <AllRepos allData={backendData} />
+      <Routes>
+        {/* Main Page, http://localhost:3000/ */}
+        <Route
+          path='/'
+          element={<AllReposPage allData={backendData} />}
+        />
+
+        {/* Main Page, http://localhost:3000/repoId */}
+        <Route
+          path='/:repoId'
+          element={<RepoDetailPage />}
+        />
+      </Routes>
     </main>
   );
 };
