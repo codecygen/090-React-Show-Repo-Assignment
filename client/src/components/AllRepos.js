@@ -1,25 +1,26 @@
-import Repo from "./Repo";
+import RepoCart from "./RepoCart";
 
 const AllRepos = (props) => {
     const { allData } = props;
 
-    console.log(allData);
-
-    const dataComponent = allData.length === 0 ?
-        (<p>Loading...</p>) :
-        (allData.map((data) => (
-            <Repo
-                key={data.id}
-                name={data.name} 
-                description={data.description}
-                language={data.language}
-                forks={data.forks_count}
+    const allRepoCarts = allData.map(data => (
+            <RepoCart 
+                key={data.id} 
+                name={data.name}
+                description={data.description} 
+                language={data.language} 
+                forks={data.forks_count} 
+                date={data.created_at}
             />
-        )));
+    ));
+
+    const repoDisplay = allData.length === 0 ?
+        (<p>Loading...</p>) :
+        (allRepoCarts);
 
     return (
         <section>
-            {dataComponent}
+            {repoDisplay}
         </section>
     );
 };

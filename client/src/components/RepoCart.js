@@ -1,11 +1,9 @@
 import classes from './Repo.module.css';
 
-const Repo = (props) => {
-    let { name, description, language, forks } = props;
-    name = name ? name : 'N/A';
-    description = description ? name : 'N/A';
-    language = language ? name : 'N/A';
-    forks = forks ? name : 'N/A';
+const RepoCart = (props) => {
+    const { name, description, language, forks, date } = props;
+
+    const formattedDate = new Date(date).toLocaleDateString('EN-CA');
 
     return (
         <ul className={classes.cart}>
@@ -13,8 +11,9 @@ const Repo = (props) => {
             <li><b>Description:</b> {description}</li>
             <li><b>Language:</b> {language}</li>
             <li><b>Forks Count:</b> {forks}</li>
+            <li><b>Date:</b> {formattedDate}</li>
         </ul>
     );
 };
 
-export default Repo;
+export default RepoCart;

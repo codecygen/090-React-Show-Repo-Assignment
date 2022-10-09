@@ -11,9 +11,12 @@ const useFetch = () => {
       ;
     }, []);
 
-    console.log(backendData);
+    // Sorting the data so that latest will show up first.
+    const dateSortedData = backendData.sort(
+      (a, b) => a.created_at > b.created_at ? -1 : 1
+    );
 
-    return backendData;
+    return dateSortedData;
 };
 
 export default useFetch;
