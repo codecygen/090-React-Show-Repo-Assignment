@@ -1,0 +1,6 @@
+.filter > select {
+    margin-left: 30px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 125px;
+}
