@@ -1,0 +1,11 @@
+.cart {
+    border: 1px solid black;
+    list-style-type: none;
+    border-radius: 10px;
+    background-color: #dbdbe8;
+}
+
+.cart b {
+    color: #d23434;
+    margin-right: 10px;
+}

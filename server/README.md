@@ -1,2 +1,2 @@
 - After installing the dependencies, **npm i**
-- Start the frontend server, **npm start**
+- Start the backend server, **npm run dev**

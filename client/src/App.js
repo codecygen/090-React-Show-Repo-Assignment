@@ -1,25 +1,15 @@
-import { useEffect, useState } from 'react';
+import AllRepos from './components/AllRepos';
+import useFetch from './hooks/use-fetch';
+
+import classes from './App.module.css';
 
 const App = () => {
-  // const [backendData, setBackendData] = useState({});
-
-  useEffect(() => {
-    fetch('/repos')
-      .then(res => res.json())
-      .then(data => console.log(data))
-      .catch(err => console.log(err.message))
-    ;
-  }, []);
-
-  // console.log(backendData);
-
-  // const dataComponent = (typeof backendData.users === 'undefined') ?
-  //   (<p>Loading...</p>) :
-  //   (backendData.users.map((user, i) => (<p key={i}>{user}</p>)));
+  const backendData = useFetch();
 
   return (
-    // <div>{dataComponent}</div>
-    <div>Some Info</div>
+    <main className={classes.main}>
+      <AllRepos allData={backendData} />
+    </main>
   );
 };
 
