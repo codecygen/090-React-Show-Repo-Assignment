@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const App = () => {
+  // const [backendData, setBackendData] = useState({});
 
   useEffect(() => {
     fetch('/repos')
@@ -10,7 +11,14 @@ const App = () => {
     ;
   }, []);
 
+  // console.log(backendData);
+
+  // const dataComponent = (typeof backendData.users === 'undefined') ?
+  //   (<p>Loading...</p>) :
+  //   (backendData.users.map((user, i) => (<p key={i}>{user}</p>)));
+
   return (
+    // <div>{dataComponent}</div>
     <div>Some Info</div>
   );
 };
