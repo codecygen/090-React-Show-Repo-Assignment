@@ -6,5 +6,5 @@ Look at the README.md files in the server and client folders for more info on ho
 
 ## Front End:
 - Front end is built in ReactJS. Client side runs on port 3000 by default. Once **localhost:3000** is requested on the browser, it lists all the repositories by name, description, language, forks count and date.
-- All repositories on the main page are clickable and once clicked, it redirects user into the repo details page which will be located at **localhost:3000/:repoId**.
+- All repositories on the homepage are clickable and once clicked, it redirects user into the repo details page which will be located at **localhost:3000/:repoId**. Additionally homepage has a dropdown menu where you can filter out repositories by their language type.
 - Repo details page has message, author id, recent commit date info as well as markdown file if it exists.
