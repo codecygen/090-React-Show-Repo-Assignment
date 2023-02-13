@@ -1,5 +1,5 @@
 # About the Project:
-This project pulls up some of the data from an API endpoint and local file. It combines both lists. Lists consist of publicly available repos. Front end shows the list of the pulled up and combined repos. For further info, lists are made clickable to access more data about an existing repo. Additionally, repos can be filtered based on various aspects. 
+This project pulls up some of the data from an API endpoint and others from a local file. It combines both lists. Lists consist of publicly available repos. Front end shows the list of the pulled up and combined repos. For further info, lists are made clickable to access more data about an existing repo. Additionally, repos can be filtered based on various aspects. 
 
 # Project
 Look at the README.md files in the server and client folders for more info on how to start server and client on your local computer.
